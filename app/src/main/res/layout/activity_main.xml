@@ -84,7 +84,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/rgGenero"
             android:orientation="horizontal"
-            android:layout_marginLeft="110sp">
+            android:layout_marginLeft="110dp">
 
 
             <RadioButton
@@ -92,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/rbHombre"
                 android:text="Hombre"
-                android:layout_marginRight="30sp"/>
+                android:layout_marginRight="30dp"/>
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
