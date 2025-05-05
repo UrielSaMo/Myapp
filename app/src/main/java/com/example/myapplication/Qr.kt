@@ -33,11 +33,10 @@ class Qr : AppCompatActivity() {
         val clave = intent.getStringExtra("clave")
 
         // Mostrar en los TextView
-        findViewById<TextView>(R.id.tvNombre).text = "Nombre: $nombre"
-        findViewById<TextView>(R.id.tvApellidos).text = "Apellidos: $apellidos"
-        findViewById<TextView>(R.id.tvEdad).text = "Edad: $edad"
-        findViewById<TextView>(R.id.tvGenero).text = "Género: $genero"
-        findViewById<TextView>(R.id.tvClave).text = "Clave: $clave"
+        findViewById<TextView>(R.id.tvNombre).text = nombre
+        findViewById<TextView>(R.id.tvApellidos).text = apellidos
+
+
 
         // Generar el código QR solo con la clave
         val qrData = clave ?: "" // Si la clave es nula, usar una cadena vacía
