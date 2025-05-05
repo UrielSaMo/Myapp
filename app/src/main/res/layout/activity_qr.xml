@@ -8,82 +8,86 @@
     android:background="#FFFFFF"
     tools:context=".Qr">
 
-
-<TextView
-        android:id="@+id/tvEncabezado"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:background="#2E7D32"
+    <LinearLayout
+        android:id="@+id/contenedorCaptura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:gravity="center"
-        android:text="Empleado"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        android:textSize="20sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="60dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"/>
+        android:layout_marginTop="60dp">
 
-    <!-- Nombre -->
-    <TextView
-        android:id="@+id/labelNombre"
+        <!-- Encabezado -->
+        <TextView
+            android:id="@+id/tvEncabezado"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:background="#2E7D32"
+            android:gravity="center"
+            android:text="Empleado"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"/>
+
+        <!-- Nombre -->
+        <TextView
+            android:id="@+id/labelNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Nombre:"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/tvNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="---"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <!-- Apellidos -->
+        <TextView
+            android:id="@+id/labelApellidos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Apellidos:"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/tvApellidos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="---"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+
+        <!-- Código QR -->
+        <ImageView
+            android:id="@+id/QRcode"
+            android:layout_width="320dp"
+            android:layout_height="320dp"
+            android:layout_marginTop="20dp"
+            android:contentDescription="Código QR"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnDescargar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:text="Nombre:"
-        android:textSize="18sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="130dp"/>
-
-    <TextView
-        android:id="@+id/tvNombre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="---"
-        android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/labelNombre"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"/>
-
-    <!-- Apellidos -->
-    <TextView
-        android:id="@+id/labelApellidos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:text="Apellidos:"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/tvNombre"
+        android:text="Descargar"
+        app:layout_constraintTop_toBottomOf="@id/contenedorCaptura"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp"/>
 
-    <TextView
-        android:id="@+id/tvApellidos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="---"
-        android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/labelApellidos"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"/>
-
-
-    <ImageView
-        android:id="@+id/QRcode"
-        android:layout_width="320dp"
-        android:layout_height="320dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.744" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+
